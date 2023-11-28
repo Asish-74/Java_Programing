@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salon Booking</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: blueviolet;
+      }
+
+      header {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(239, 233, 233, 0.63);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+       ul{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Book Your Haircut</h1>
+    </header>
+    
+
+    <main>
+      <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="haircutType">Choose Haircut Type:</label>
+        <select id="haircutType" name="haircutType" required>
+          <option value="standard">Standard Haircut</option>
+          <option value="fade">Fade Haircut</option>
+          <option value="buzz">Buzz Cut</option>
+          <option value="fade">Pomadour</option>
+          <option value="buzz">Hi-top fade</option>
+          <option value="fade">Quiff</option>
+          <option value="buzz">Caser cut</option>
+        </select>
+
+        <label for="FacialType">Choose FacialType: </label>
+        <select id="FacialType"  name="FacialType">
+          <option value="None ">None</option>
+          <option value="Express Radiance Facial">Express Radiance Facial </option>
+          <option value="Regenerating Facial">Regenerating Facial</option>
+          <option value="Face Radiofrequency">Face Radiofrequency</option>
+          <option value="Facia Ayurveda">Facia Ayurveda</option>
+          <option value="Triming Beared">Triming Beared</option>
+          <option value="Clean Save ">Clean Save</option>
+        </select>
+
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required />
+
+        <button type="button" onclick="submitForm()">Book Now</button>
+      </form>
+    </main>
+
+    <script>
+      function submitForm() {
+        // In a real-world scenario, you would send the form data to a server for processing.
+        // Here, we'll just show an alert with the form data.
+        const formData = new FormData(document.getElementById("bookingForm"));
+        let bookingDetails = {};
+        formData.forEach((value, key) => {
+          bookingDetails[key] = value;
+        });
+
+        alert("Booking Details:\n" + JSON.stringify(bookingDetails, null, 2));
+      }
+
+      function submitForm() {
+        const successMessage = "Your seat is booked";
+        // Display the success message
+        alert(successMessage);
+      }
+    </script>
+  </body>
+</html>
