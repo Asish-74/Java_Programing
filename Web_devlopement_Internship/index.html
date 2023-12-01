@@ -13,12 +13,13 @@
       }
 
       header {
-        background-color: black;
+        background-color: burlywood;;
         color: #fff;
         text-align: center;
         padding: 1em;
+        display: flow-root;
+        padding: inherit;
       }
-
       main {
         max-width: 800px;
         margin: 20px auto;
@@ -52,13 +53,23 @@
         border-radius: 4px;
         cursor: pointer;
       }
-       ul{
-        text-decoration: none;
+      li{
+        float: left;
+        list-style-type: none;
+        padding: 10px 10px;
+        margin: 5px;
       }
     </style>
   </head>
   <body>
     <header>
+      <nav class="navbar">
+        <ul>
+          <li style="color: white;"> <a href="http://127.0.0.1:5500/index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       <h1>Book Your Haircut</h1>
     </header>
     
