@@ -113,7 +113,6 @@
 
     <script>
       function submitForm() {
-        // Perform validation (you can add more validation rules)
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var username = document.getElementById("username").value;
@@ -123,15 +122,8 @@
           alert("Please fill in all fields");
           return;
         }
-
-        // You can add more sophisticated validation for email and password strength
-
-        // Display success message
         document.getElementById("successMessage").innerHTML =
           "Registration successful!";
-
-        // You can also send the form data to a server for further processing
-        // For simplicity, we are not doing that in this example
       }
     </script>
   </body>
