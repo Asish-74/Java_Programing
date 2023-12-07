@@ -19,8 +19,7 @@ public class numberGuessingGame {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Number Guessing Game!");
-        System.out.println("I've selected a random number between " + minRange + " and " + maxRange + ". Try to guess it!");
-
+        System.out.println("I've selected a random number between " + minRange + " and " + maxRange + ".Try to guess it!");
         while (!hasGuessedCorrectly) {
             System.out.print("Enter your guess: ");
             userGuess = scanner.nextInt();
