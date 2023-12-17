@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fas fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search " class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-signin border">
+                <p><span>Hello, sign in </span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="cart border" onclick="viewCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart <span id="cart-count">0</span>
+            </div>
+        </div>
+
+        <div class="shop-section">
+            <div class="box1 box">
+                <div class="box-content">
+                    <h2>Casual Shirt</h2>
+                    <div class="box-img" style="background-image: url('box1.jpg');"></div>
+                    <p class="paragraph">₹1499</i></p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                            <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="box-content">
+                    <h2>Party Dresses</h2>
+                    <div class="box-img" style="background-image: url('box2.jpeg');"></div>
+                    <p class="paragraph">₹1999</i></p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                        <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="box-content">
+                    <h2>Long Dresses Of Women</h2>
+                    <div class="box-img" style="background-image: url('box3.jpeg');"></div>
+                    <p class="paragraph">₹999></p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                        <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="box-content">
+                    <h2>Jeans Of Women</h2>
+                    <div class="box-img" style="background-image: url('box4.jpeg');"></div>
+                    <p class="paragraph">₹2499</p>
+                    <div class="butm">
+                        <div class="butm">
+                            <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                            <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="box5 box">
+                <div class="box-content">
+                    <h2>Lipstick and Cosmetic</h2>
+                    <div class="box-img" style="background-image: url('box5.jpg');"></div>
+                    <p class="paragraph">₹1999</p>
+                    <div class="butm">
+                        <div class="butm">
+                            <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                            <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="box6 box">
+                <div class="box-content">
+                    <h2>Running Shooes</h2>
+                    <div class="box-img" style="background-image: url('box6.jpeg');"></div>
+                    <p class="paragraph">₹1800</p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                        <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box7 box">
+                <div class="box-content">
+                    <h2>Women Shooes Combo</h2>
+                    <div class="box-img" style="background-image: url('box7.jpeg');"></div>
+                    <p class="paragraph">₹850></p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                        <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box8 box">
+                <div class="box-content">
+                    <h2>Samsung S23 Ultra</h2>
+                    <div class="box-img" style="background-image: url('box8.jpg');"></div>
+                    <p class="paragraph">₹1,58,998</p>
+                    <div class="butm">
+                        <button onclick="buyNow()"> <a href="javascript:void(0);" class="decoration">Buy Now</a></button>
+                            <button onclick="addToCart()"><a href="javascript:void(0);" class="decoration">Add to Cart</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+        <script src="index.js"></script>
+
+</body>
+<footer>
+    <div class="copyright">
+        &copy; Design by Asish 17 dec 2023,1996-2023,e-Shooping , Inc. or its affiliates
+    </div>
+</footer>
+
+</html>
